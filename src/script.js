@@ -125,11 +125,15 @@ const tick = () =>
 
     const elapsedTime = clock.getElapsedTime()
 
+
     // Update objects
     sphere.rotation.y = .2 * elapsedTime
+    particlesMesh.rotation.y = -.1 * elapsedTime
+
+    if (mouseX > 0){
     particlesMesh.rotation.y = -mouseY * (elapsedTime) * 0.0004 / 2;
     particlesMesh.rotation.x = -mouseX * (elapsedTime) * 0.0004 / 2;
-
+    }
     // Update Orbital Controls
     // controls.update()
 
